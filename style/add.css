@@ -1,0 +1,95 @@
+:root {
+    --primary: rgb(253, 100, 100);
+    --dark: #0f172a;
+    --darker: #0b111f;
+    --secondery-text: #8795aa;
+}
+
+body {
+    background-color: var(--dark);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.modalInst, .modalClass, .modalPrice {
+    position: fixed;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    .content {
+        background-color: #1e293b;
+        /* padding: 30px; */
+        border: solid 2px #303e52;
+        border-radius: 8px;
+        width: 40%;
+        aspect-ratio: 1/1;
+        /* padding: 100px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+        form {
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+            legend {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                /* align-items: center; */
+                gap: 20px;
+                width: 80%;
+            }
+
+            input {
+                background-color: #0f172a;
+                border: solid 2px #303e52;
+                border-radius: 5px;
+                outline: none;
+                width: 100%;
+                padding: 10px;
+                color: white;
+                width: 100%;
+                font-size: 30px;
+            }
+    
+            button {
+                float: right;
+                color: #8795aa;
+                border: none;
+                background-color: transparent;
+                margin: 10px 0 0 20px;
+                padding: 10px 15px;
+                font-size: 30px;
+            }
+    
+            .actions #add {
+                background-color: #3b82f6;
+                color: white;
+                /* padding: 10px 15px; */
+                border-radius: 5px;
+            }
+    
+            button:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}

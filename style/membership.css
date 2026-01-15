@@ -1,0 +1,149 @@
+:root {
+    --primary: rgb(253, 100, 100);
+    --dark: #0f172a;
+    --darker: #0b111f;
+    --secondery-text: #8795aa;
+}
+
+.container {
+
+    .intro {
+        width: 90%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+
+        .intro-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+
+                font-size: 70px;
+                text-transform: uppercase;
+
+            }
+
+            p {
+
+                color: var(--secondery-text);
+                font-size: 30px;
+                font-weight: 350;
+
+            }
+
+        }
+
+        .cards {
+
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 70px 30px;
+            margin: 5% 0;
+            
+            .card {
+                
+                padding: 5%;
+                border: var(--secondery-text) 2px solid;
+                border-radius: 12px;
+                background-color: #1e293b;
+                transition: all 0.3s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                .name {
+                    font-size: 30px;
+                    text-transform: uppercase;
+                }
+    
+                .price {
+                    font-size: 40px;
+                    color: var(--primary);
+                    margin-bottom: 2%;
+    
+                    span {
+                        font-size: 20px;
+                        color: var(--secondery-text);
+                    }
+                    
+                }
+
+                .desc {
+
+                    font-size: 22px;
+                    color: var(--secondery-text);
+                    margin: 3% 0;
+
+                }
+
+                button {
+
+                    border: var(--secondery-text) 2px solid;
+                    outline: none;
+                    color: white;
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    width: 100%;
+                    border-radius: 8px;
+                    transition: all 0.3s ease-in-out;
+                    font-size: large;
+
+                }
+
+                button:hover {
+
+                    border: white 2px solid;
+                    cursor: pointer;
+
+                }
+                
+                
+                
+            }
+            
+            .elite {
+                border: var(--primary) 2px solid;
+                position: relative;
+                
+                .elite-btn {
+    
+                    background-color: red;
+                    border: none;
+    
+                }
+    
+                .elite-btn:hover {
+                    background-color: rgb(200, 0, 0);
+                    border: none;
+                }
+
+                .abs {
+                    text-transform: uppercase;
+                    background-color: red;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 10px 0 10px;
+                    padding: 5px 20px;
+                }
+
+            }
+
+            
+            
+            .card:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+    }
+
+}

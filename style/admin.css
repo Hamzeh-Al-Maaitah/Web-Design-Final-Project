@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #0f172a;
+    color: white;
+    width: 75%;
+    justify-self: center;
+
+    h1 {
+        padding: 40px 0;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.842%;
+    /* align-items: center; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+
+.manage-inst, .manage-price, .manage-class {
+    background-color: #1e293b;
+    width: 46%;
+    border-radius: 8px;
+    border: solid 2px #303e52;
+    padding: 20px;
+    margin-top: 40px;
+
+    button:hover {
+        cursor: pointer;
+    }
+
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        button {
+            background-color: #3b82f6;
+            font-size: 20px;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 5px 15px;
+            border-radius: 5px;;
+        }
+    }
+
+    .list-items {
+        display: flex;
+        flex-direction: column;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #293548;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 7px 0;
+
+            button:nth-child(1) {
+                color: lightblue;
+                font-size: 25px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                margin-right: 20px;
+            }
+
+            .actions{
+                display: flex;
+            }
+            .actions a {
+                button {
+                color: red;
+                font-size: 25px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                margin-right: 10px;
+                }
+            }
+            button:hover {
+                cursor: pointer;
+                color: white;
+            }
+
+            .desc {
+                p {
+                    color: #8795aa;
+                }
+            }
+            
+        }
+    }
+}
+
+
+.modalInst, .modalClass, .modalPrice {
+    position: fixed;
+    top: 0;
+    left:0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    .content {
+        background-color: #1e293b;
+        /* padding: 30px; */
+        border: solid 2px #303e52;
+        border-radius: 8px;
+        width: 40%;
+        aspect-ratio: 1/1;
+        /* padding: 100px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+        form {
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+            legend {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                /* align-items: center; */
+                gap: 20px;
+                width: 80%;
+            }
+
+            input {
+                background-color: #0f172a;
+                border: solid 2px #303e52;
+                border-radius: 5px;
+                outline: none;
+                width: 100%;
+                padding: 10px;
+                color: white;
+                width: 100%;
+                font-size: 30px;
+            }
+    
+            button {
+                float: right;
+                color: #8795aa;
+                border: none;
+                background-color: transparent;
+                margin: 10px 0 0 20px;
+                padding: 10px 15px;
+                font-size: 30px;
+            }
+    
+            .actions #update {
+                background-color: #3b82f6;
+                color: white;
+                /* padding: 10px 15px; */
+                border-radius: 5px;
+            }
+    
+            button:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+

@@ -1,0 +1,146 @@
+/* style/login.css */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    text-align: center;
+    padding: 51px 65px;
+    border-radius: 8px;
+    width: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color:  rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    margin: 20px;
+    padding: 8px;
+    width: 300px;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-bottom: white 2px solid;
+    /* box-shadow: 0 0 8px 2px white; */
+    box-shadow: 0 7px 6px -6px white;
+}
+
+button {
+    background-color: rgb(255, 49, 49);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 90%;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: rgb(125, 0, 0);
+    transition: 0.5s;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+svg {
+    fill: rgb(255, 49, 49);
+    width: 150px;
+    height: 150px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    display: inline;
+}
+
+.signup {
+    margin: 0;
+    padding: 0;
+}
+
+.remember-checkbox {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+
+.options {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.remember-me {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+
+    input {
+        margin-right: 10px;
+    }
+}
+
+.forgot-password {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-self: end;
+}

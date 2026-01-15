@@ -1,0 +1,223 @@
+/* @font-face {
+    font-family: 'UPBOLTERS';
+    src: url('UPBOLTERS.ttf.woff') format('woff'),
+        url('UPBOLTERS.ttf.svg#UPBOLTERS') format('svg'),
+        url('UPBOLTERS.ttf.eot'),
+        url('UPBOLTERS.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+:root {
+    --primary: rgb(253, 100, 100);
+    --dark: #0f172a;
+    --darker: #0b111f;
+    --secondery-text: #8795aa;
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(15, 23, 42, 0.8);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-bottom: #1e293b 1px solid;
+    font-size: 20px;
+}
+
+header nav {
+    font-weight: bold;
+}
+
+.login-signup-nav {
+    display: flex;
+    justify-content: space-between;
+    a {
+        border: none;
+        padding: 10px 24px;
+        color: white;
+        background-color: var(--primary);
+        font-size: 18px;
+        border-radius: 8px;
+        margin: 0px 10px;
+        cursor: pointer;
+    }
+
+    /* .username {
+        color: white;
+        background-color: var(--primary);
+        padding: 10px 24px;
+        border-radius: 8px;
+    } */
+
+    a:hover {
+        background-color: rgb(180, 49, 49);
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+.hover:hover {
+    border-bottom: solid 2px var(--primary);
+    text-shadow: 0px 0px 20px var(--primary);
+    color: var(--primary);
+    transition: all 0.1s ease-in-out;
+
+}
+
+.nav {
+    width: 500px;
+    display: flex;
+    margin: 0 20%;
+    justify-content: space-between;
+}
+
+a .nav-logo {
+    height: 80px;
+    width: auto;
+    margin-right: auto;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        fill: var(--primary);
+        width: 70px;
+        height: 70px;
+    }
+
+    .h1 {
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+
+    .inner-logo .h1{
+        font-size: 50px;
+        width: 100px;
+        letter-spacing: 5px;
+        font-weight: 900;
+    }
+
+    .inner-logo .p {
+        font-size: 20px;
+        font-weight: lighter;
+        color: white;
+        margin-top: -15px;
+        letter-spacing: 1.2px;
+        padding-left: 2px;
+    }
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: white;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Animate to X when open */
+header.menu-open .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+header.menu-open .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+header.menu-open .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== Desktop layout tweaks ===== */
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ===== Mobile dropdown ===== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide links by default on mobile */
+    .header-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #1e293b;
+        padding: 18px 16px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: all 0.2s ease;
+    }
+
+    header.menu-open .header-links {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Make nav vertical + full width */
+    .nav {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .login-signup-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
