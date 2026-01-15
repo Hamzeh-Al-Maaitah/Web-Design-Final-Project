@@ -1,6 +1,6 @@
 <?php
 
-include "connection.php";
+// include "pages/connection.php";
 
 ?>
 
@@ -10,11 +10,11 @@ include "connection.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../style/index.css">
-    <link rel="icon" href="../style/assets/images/new_logo.png">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" href="style/assets/images/new_logo.png">
     <?php
         // include_once 'fonts.php';
-        include_once 'header.php';
+        include_once 'pages/header.php';
     ?>
 
     <!-- Montserrat Google fonts -->
@@ -37,7 +37,7 @@ include "connection.php";
 </head>
 <body>
 
-    <img src="../style/assets/images/mainbgimg.jpg" alt="" class="bgimg">
+    <img src="style/assets/images/mainbgimg.jpg" alt="" class="bgimg">
     <div class="index">
         <section class="hero">
             <div class="hero1">
@@ -47,8 +47,8 @@ include "connection.php";
             <div class="hero2">
                 <p>Join HTU Martial Arts for world-class training in Judo, Karate, Muay Thai, and Jiu-Jitsu. From beginners to elite athletes, find your path to strength.</p>
                 <div class="hero-buttons">
-                    <button class="hero-btn1" onclick="window.location.href = 'signup.php'">START TRAINING</button>
-                    <button class="hero-btn2" onclick="window.location.href = 'classes.php'">EXPLORE CLASSES</button>
+                    <button class="hero-btn1" onclick="window.location.href = 'pages/signup.php'">START TRAINING</button>
+                    <button class="hero-btn2" onclick="window.location.href = 'pages/classes.php'">EXPLORE CLASSES</button>
                 </div>
             </div>
         </section>
@@ -72,7 +72,7 @@ include "connection.php";
             </div> -->
 
             <div>
-                <img src="../style/assets/images/GYM_building.png" alt="">
+                <img src="style/assets/images/GYM_building.png" alt="">
             </div>
             <div class="about-text">
                 <h2>More Than Just A Gym</h2>
@@ -101,63 +101,63 @@ include "connection.php";
                 <h1>POPULAR CLASSES</h1>
                 <div class="classes-header">
                     <p>Find your fighting style.</p>
-                    <a href="classes.php">View All <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="pages/classes.php">View All <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="cards">
 
                 <?php
                 
-                    include 'connection.php';
+                    // include 'pages/connection.php';
 
-                    $sql = "SELECT * FROM classes;";
-                    $result = mysqli_query($con, $sql);
+                    // $sql = "SELECT * FROM classes;";
+                    // $result = mysqli_query($con, $sql);
 
-                    $resultFetched = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    // $resultFetched = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-                    // print_r($resultFetched);
+                    // // print_r($resultFetched);
 
-                    for ($i = 0; $i < 3; $i++) {
+                    // for ($i = 0; $i < 3; $i++) {
 
-                        echo '
+                    //     echo '
                         
-                            <div class="card">
-                                <img src="../style/assets/images/'.$resultFetched[$i]['name'].'.jpg" alt="">
-                                <div class="dark-grade"></div>
-                                <div class="inner-text">
-                                    <h1>'.$resultFetched[$i]['name'].'</h1>
-                                    <a href="classes.php">LEARN MORE</a>
-                                </div>
-                            </div>
+                    //         <div class="card">
+                    //             <img src="style/assets/images/'.$resultFetched[$i]['name'].'.jpg" alt="">
+                    //             <div class="dark-grade"></div>
+                    //             <div class="inner-text">
+                    //                 <h1>'.$resultFetched[$i]['name'].'</h1>
+                    //                 <a href="pages/classes.php">LEARN MORE</a>
+                    //             </div>
+                    //         </div>
                         
-                        ';
+                    //     ';
 
-                    }
+                    // }
                 
                 ?>
                 
                     <!-- <div class="card">
-                        <img src="../style/assets/images/Jiu-Jitsu.jpg" alt="">
+                        <img src="style/assets/images/Jiu-Jitsu.jpg" alt="">
                         <div class="dark-grade"></div>
                         <div class="inner-text">
                             <h1>JIU-JITSU</h1>
-                            <a href="classes.php">LEARN MORE</a>
+                            <a href="pages/classes.php">LEARN MORE</a>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../style/assets/images/Muay Thai.jpg" alt="">
+                        <img src="style/assets/images/Muay Thai.jpg" alt="">
                         <div class="dark-grade"></div>
                         <div class="inner-text">
                             <h1>MUAY THAI</h1>
-                            <a href="classes.php">LEARN MORE</a>
+                            <a href="pages/classes.php">LEARN MORE</a>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../style/assets/images/Judo.jpg" alt="">
+                        <img src="style/assets/images/Judo.jpg" alt="">
                         <div class="dark-grade"></div>
                         <div class="inner-text">
                             <h1>JUDO</h1>
-                            <a href="classes.php">LEARN MORE</a>
+                            <a href="pages/classes.php">LEARN MORE</a>
                         </div>
                     </div> -->
                 </div>
@@ -198,7 +198,7 @@ include "connection.php";
                 </div>
             </div>
             <div class="offer-image">
-                <img src="../style/assets/images/kids.jpg" alt="">
+                <img src="style/assets/images/kids.jpg" alt="">
                 <div class="dark-grade"></div>
                 <div class="inner-text">
                     <h2>Ages 5-12</h2>
@@ -216,33 +216,33 @@ include "connection.php";
             <div class="cards">
                 <?php
                 
-                    $sql = "SELECT * FROM instructors;";
-                    $result = mysqli_query($con, $sql);
+                    // $sql = "SELECT * FROM instructors;";
+                    // $result = mysqli_query($con, $sql);
 
-                    $resultFetched = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    // $resultFetched = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
 
-                    if($result) {
+                    // if($result) {
 
-                        // print_r($resultFetched);
+                    //     // print_r($resultFetched);
 
-                        for ($i = 0; $i < 3; $i++) {
-                        echo '
-                            <div>
-                                <img src="'.$resultFetched[$i]["image_path"].'" alt="">
-                                <h1 class="name">'.$resultFetched[$i]['name'].'</h1>
-                                <p class="desc">'.$resultFetched[$i]['job_title'].'</p>
-                            </div>
-                        ';
-                        }
-                    }
+                    //     for ($i = 0; $i < 3; $i++) {
+                    //     echo '
+                    //         <div>
+                    //             <img src="'.$resultFetched[$i]["image_path"].'" alt="">
+                    //             <h1 class="name">'.$resultFetched[$i]['name'].'</h1>
+                    //             <p class="desc">'.$resultFetched[$i]['job_title'].'</p>
+                    //         </div>
+                    //     ';
+                    //     }
+                    // }
                 
                 ?>
                 
             </div>
             <div class="instructors-redirect">
-                <a href="instructors.php">
+                <a href="pages/instructors.php">
                     <button>Meet The Full Team</button>
                 </a>
             </div>
@@ -289,7 +289,7 @@ include "connection.php";
                 <h2>First class is free. No commitments. Just show up and train.</h2>
             </div>
             <div>
-                <a href="membership.php"><button>Join HTU GYM now</button></a>
+                <a href="pages/membership.php"><button>Join HTU GYM now</button></a>
             </div>
         </section>
     </div>
@@ -300,7 +300,7 @@ include "connection.php";
     
     // include 'classes.php';
 
-    include 'footer.php';
+    // include 'pages/footer.php';
     
     ?>
 
